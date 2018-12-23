@@ -15,6 +15,7 @@ flask-mail = "*"
 python-dotenv = "*"
 bootstrap-flask = "*"
 flask-moment = "*"
+flask-sqlalchemy = "*"
 
 [requires]
 python_version = "3.6"
