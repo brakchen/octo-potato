@@ -1,2 +1,2 @@
 FLASK_ENV=development
-FLASK_APP=octo-potato
+FLASK_APP=octo_potato
