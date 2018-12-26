@@ -8,12 +8,20 @@ import os
 app = Flask(__name__)
 db = SQLAlchemy(app)
 
-class Note(db.Model):
+class Author(db.Model):
     id = db.Column(db.Integer,primary_key=True)
-    body = db.Column(db.Text)
+    name = db.Column(db.String(70), unique=True)
+    phone = db.Column(db.String(20))
+    articles = db.relationship('Article')
 
-    def __repr__(self):
-        return '<Note {}>'.format(self.body)
+class Article(db.Model):
+    id = db.Column(db.Integer,primary_key=True)
+    title = db.Column(db.String(50),index=True)
+    body= db.Column(db.Text)
+    author_id = db.Column(db.Integer, db.ForeignKey('author.id'))
+
+
+
 
 
 
@@ -37,4 +45,4 @@ def hello():
 
 @app.shell_context_processor
 def make_shell_context():
-    return dict(db=db,notes=Note)
+    return dict(db=db,author=Author, article=Article)
