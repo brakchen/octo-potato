@@ -16,6 +16,7 @@ python-dotenv = "*"
 bootstrap-flask = "*"
 flask-moment = "*"
 flask-sqlalchemy = "*"
+flask-debugtoolbar = "*"
 
 [requires]
 python_version = "3.6"
