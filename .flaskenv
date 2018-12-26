@@ -1,3 +1,2 @@
 FLASK_ENV=development
-FLASK_APP=octo_potato
-DEBUG_TB_INTERCEPT_REDIRECTS = False
+FLASK_APP=octo_potato/app.py
